@@ -11,10 +11,16 @@
     <h3>learn from <a id="explore-link" href="">Visit this place</a></h3>
   </body>
   <script>
-    fetch("https://www.boredapi.com/api/activity")
-      .then((response) => response.json())
-      .then((data) => {
-        document.getElementById("activity").innerText = data.activity;
-      });
+    const doSomething = () => {
+      fetch("https://www.boredapi.com/api/activity")
+        .then((response) => response.json())
+        .then((data) => {
+          document.getElementById("activity").innerText = data.activity;
+        });
+    };
+    doSomething();
+    setInterval(() => {
+      doSomething();
+    }, 500);
   </script>
 </html>
