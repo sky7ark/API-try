@@ -23,6 +23,7 @@ const greatPerson = {
 };
 
 const friendlyChargeBill = specialPerson.chargeBill.bind(friendlyPerson);
+specialPerson.chargeBill.call(greatPerson, 2000);
 
 friendlyChargeBill(6000);
 
@@ -33,3 +34,4 @@ console.log(friendlyPerson);
 friendlyChargeBill(2000);
 console.log(friendlyPerson);
 console.log(specialPerson);
+console.log(greatPerson.salary);
