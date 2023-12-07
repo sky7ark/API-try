@@ -24,14 +24,15 @@ const greatPerson = {
 
 const friendlyChargeBill = specialPerson.chargeBill.bind(friendlyPerson);
 specialPerson.chargeBill.call(greatPerson, 2000);
+specialPerson.chargeBill.apply(friendlyPerson, [150]);
 
-friendlyChargeBill(6000);
+friendlyChargeBill(1000);
 
 // specialPerson.chargeBill(1000);
 // specialPerson.chargeBill(100);
 // console.log(specialPerson.salary);
-console.log(friendlyPerson);
+console.log(friendlyPerson.salary);
 friendlyChargeBill(2000);
-console.log(friendlyPerson);
-console.log(specialPerson);
+console.log(friendlyPerson.salary);
+//console.log(specialPerson);
 console.log(greatPerson.salary);
